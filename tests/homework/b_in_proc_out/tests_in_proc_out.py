@@ -1,7 +1,6 @@
 import unittest
 from src.homework.b_in_proc_out.in_proc_out import multiply_numbers
 
-
 class Test_MultiplyNumbers(unittest.TestCase):
     def test_multiply_positive(self):
         self.assertEqual(multiply_numbers(3, 4), 12)
