@@ -1,5 +1,7 @@
-import devprocess
+from devprocess import hello_world
 
-result = devprocess.add_numbers(5, 5)
+def main():
+    hello_world("Bianca")
 
-print(result)
+if __name__ == "__main__":
+    main()
