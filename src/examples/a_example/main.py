@@ -1,8 +1,5 @@
-from devprocess import hello_world, echo_value
+import devprocess
 
-def main():
-    hello_world("Bianca")
-    print(echo_value(5))
+result = devprocess.add_numbers(5, 5)
 
-if __name__ == "__main__":
-    main()
+print(result)
