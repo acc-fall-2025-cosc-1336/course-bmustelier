@@ -1,18 +1,16 @@
 import unittest
+from src.homework.b_in_proc_out.output import get_sales_tax_amount, get_tip_amount
 
-'''
-The file at /src/homework/b_in_proc_out/output has 
-the function get_number.
-'''
-from src.homework.b_in_proc_out.output import get_number
+class TestBillFunctions(unittest.TestCase):
+	def test_get_sales_tax_amount(self):
+		self.assertAlmostEqual(get_sales_tax_amount(100), 6.75)
+		self.assertAlmostEqual(get_sales_tax_amount(0), 0.0)
+		self.assertAlmostEqual(get_sales_tax_amount(50.50), 3.40875)
 
-class Test_Config(unittest.TestCase):
+	def test_get_tip_amount(self):
+		self.assertAlmostEqual(get_tip_amount(100, 0.15), 15.0)
+		self.assertAlmostEqual(get_tip_amount(80, 0.20), 16.0)
+		self.assertAlmostEqual(get_tip_amount(50.50, 0.18), 9.09)
 
-    def test_get_number_1(self):
-        #test that the function get_number returns 1
-        self.assertEqual(1, get_number(1))
-    
-    def test_get_number_2(self):
-        #test that the function get_number returns 2
-        self.assertEqual(2, get_number(2))
-
+if __name__ == "__main__":
+	unittest.main()
