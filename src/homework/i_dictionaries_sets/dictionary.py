@@ -1,4 +1,4 @@
-#def add_inventory(widgets, widget_name, quantity):
+def add_inventory(widgets, widget_name, quantity):
 	if widget_name in widgets:
 		widgets[widget_name] = widgets[widget_name] + quantity
 	else:
